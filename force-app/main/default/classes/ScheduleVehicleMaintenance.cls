@@ -1,8 +1,9 @@
 public class ScheduleVehicleMaintenance implements Schedulable {
     
     public void execute(SchedulableContext sc){
-        AutomateVehicleMaintenance am=new AutomateVehicleMaintenance();
-        
+
+        Database.executeBatch(new VehicleMaintenanceBatch(), 10);       
+
     }
     
 }
